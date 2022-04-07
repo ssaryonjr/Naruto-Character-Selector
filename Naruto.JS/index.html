@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6ceaed6488.js" crossorigin="anonymous"></script>
+    <title>2-D Naruto Selector</title>
+</head>
+<body>
+    <h1>2-D Naruto Battle Selector</h1>
+    
+  <main class="game-screen">
+      <!--Current Arena Background-->
+      <img class="background" src="fightingbackground1.gif" alt="battle-background">
+      <!--End of Current Arena Background-->
+
+    <!--Character Select & Arena Box-->
+      <div class="fighter-selector">
+        <div class="carousel item-0" data-carousel>
+        <!--Carousel Arena Choices-->    
+        <ul class="carousel-list">
+            <li class="visible">
+                <img src="fightingbackground3.gif" alt="" /> 
+            </li>
+            <li>
+                <img src="fightingbackground2.gif" alt="" />
+            </li>
+            <li>
+                <img src="fightingbackground7.gif" alt="" /> 
+          </li>
+          <li><img src="fightingbackground1.gif" alt="" /></li>
+        </li>
+        <li><img src="fightingbackground5.gif" alt="" /></li>
+    </li>
+    <li><img src="fightingbackground6.gif" alt="" /></li>
+        </ul>
+        <h3 class="arena-title">Choose Arena</h3>
+        </div>
+        <!--End of Carousel Arena Choices-->
+        
+
+        <!--Beginning of Background Slider Buttons-->
+        <i class="fa-solid fa-caret-left prev"></i> <i class="fa-solid fa-caret-right next"></i>
+        <!--End of Background Slider Buttons-->
+
+        <!--Character Portraits-->
+        <img class="sprite-portrait item-1" src="sasuke-selector.png">
+        <img class="sprite-portrait item-2 active-portrait"  src="naruto-selector.png">
+        <img class="sprite-portrait item-3" src="itachi-selector.png"> 
+        <img class="sprite-portrait item-4" class="sprite-portrait item-4" src="kakashi-selector.png">
+        
+        <!--Character Portraits-->
+    </div>
+    <!--End of Character Select & Arena Box-->
+
+
+    <h2 class="player-1-title">Player 1</h2>
+    <h2 class="player-2-title">CPU</h2>
+    <h2 class="versus-title">VS</h2>
+
+    <!--PLAYABLE SPRITES-->
+     <img class="sprite-fighter sasuke" src="sasuke.gif">
+
+    <img class="sprite-fighter naruto active-sprite" src="naruto2.gif">
+
+    <img class="sprite-fighter  itachi" src="itachi.gif">
+
+    <img class="sprite-fighter kakashi" src="kakashi.gif">
+
+    <div class="deidara">
+        <img src="deidara.gif">
+    </div>
+
+    <!--END OF PLAYABLE SPRITES-->
+  </main>
+  <h2 class="credits"><a href="https://twitter.com/samsaryonjr" target="_blank"> <i class="fa-brands fa-twitter"></i> @samsaryonjr</a></h2>
+
+  <!--Custom Kunai Cursor Plugin-->
+  <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/anime/ani-11/ani1037.ani), url(https://cur.cursors-4u.net/anime/ani-11/ani1037.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2010/09/04/animated-spinning-kunai-naruto.html" target="_blank" title="Animated Spinning Kunai - Naruto"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Animated Spinning Kunai - Naruto" style="position:absolute; top: 0px; right: 0px;" /></a>
+  <!--End of Custom Kunai Cursor Plugin-->
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive; /* Gamestyle Font */
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /*1rem = 10px, 1.5rem = 15px*/
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #181c1d 0%, #000000 74%);
+    height: 100vh;
+}
+
+h1 {
+    color: crimson;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 3.2rem;
+}
+
+.game-screen {
+    width: 1000px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid crimson;
+    position: relative;
+    min-width: 1010px;
+    min-height: 694px;
+    border-radius: 5px;
+}
+
+.background {
+      height: 100%;
+      width: 100%;
+}
+
+/* CAROUSEL SLIDER*/
+.carousel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 108px;
+    max-width: 100%;
+}
+
+.carousel li {
+    min-width: 100%;
+    max-width: 26rem;
+    height: 108px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+}
+
+.carousel li.visible {
+    opacity: 1;
+    transition: 0.6s ease-in-out;
+}
+
+.carousel li>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* END OF CAROUSEL SLIDER*/
+
+
+.fighter-selector i::before,
+.fighter-selector i {
+    color: rgb(252, 115, 4);
+    font-size: 8.2rem;
+    position: absolute;
+}
+
+.fighter-selector .fa-caret-left {
+    top: 15.6rem;
+    left: 10rem;
+    animation: floatleft 1.5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes floatleft {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatex(-7px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatex(0px);
+	}
+}
+
+
+
+.fighter-selector .fa-caret-right {
+    top: 15.8rem;
+    right: 13.5rem;
+    animation: floatleft 1.5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes floatright {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatex(7px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatex(0px);
+	}
+}
+
+
+.arena-title {
+    display: inline-block;
+    position: absolute;
+    top: 25.6rem;
+    left: 17.8rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.fighter-selector {
+    display: grid; 
+    position: absolute;
+    top: 1rem;
+    height: 28rem;
+    width: 55rem;
+    /* background: rgba(238, 52, 27, 0.699);*/
+    background:rgba(48, 46, 46, 0.651);
+   padding: 1rem;
+   border-radius: 5px;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 0px;
+   border: 1px solid white;
+   
+}
+
+.sprite-portrait {
+    width: 12.8rem;
+    height: 11.2rem;
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.sprite-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.sprite-portrait:hover{
+    border: 8px solid rgba(238, 238, 238, 0);
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23FFBE00FF' stroke-width='25' stroke-dasharray='50%25%2c 50%25%2c 50%25%2c 50%25' stroke-dashoffset='25' stroke-linecap='butt'/%3e%3c/svg%3e");
+}
+
+
+.sprite-portrait{
+    display: block;
+}
+
+.item-0 { 
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 4;
+    width: 26.2rem;
+    height: 11.2rem;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+ }
+
+ .item-0:hover{
+     border: 2px solid rgb(255, 217, 0);
+ }
+
+.item-0 img {
+    width: 100%;
+    height: 100%;
+}
+
+ .item-1 { 
+    grid-row-start: 1;
+    grid-column-start: 1;
+ 
+    grid-row-end: 2;
+    grid-column-end: 2;
+    
+ }
+ .item-2 { 
+    grid-row-start: 1;
+    grid-column-start: 2;
+ 
+    grid-row-end: 2;
+    grid-column-end: 3;
+    
+ }
+ .item-3 { 
+    grid-row-start: 1;
+    grid-column-start: 3;
+ 
+    grid-row-end: 2;
+    grid-column-end: 4;
+    
+ }
+ .item-4 { 
+    grid-row-start: 1;
+    grid-column-start: 4;
+ 
+    grid-row-end: 2;
+    grid-column-end: 5;
+ }
+
+
+.player-1-title,
+.player-2-title {
+    position: absolute;
+    z-index: 2;
+    font-size: 2rem;
+}
+
+.versus-title{
+    position: absolute;
+    z-index: 2;
+    font-size: 2.7rem;
+    bottom: 1rem;
+    color: #ffa602;
+    
+}
+
+.player-1-title{
+    bottom: .5rem;
+    left: 21rem;
+    background: #FF0000;
+    background: -webkit-linear-gradient(to left, #FF0000 0%, #FF9B29 50%, #FF0000 100%);
+    background: -moz-linear-gradient(to left, #FF0000 0%, #FF9B29 50%, #FF0000 100%);
+    background: linear-gradient(to left, #FF0000 0%, #FF9B29 50%, #FF0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.player-2-title {
+    bottom: .5rem;
+    right: 26rem;
+    background: #FF0000;
+    background: -webkit-linear-gradient(to left, #FF0000 0%, #FF9B29 50%, #FF0000 100%);
+    background: -moz-linear-gradient(to left, #FF0000 0%, #FF9B29 50%, #FF0000 100%);
+    background: linear-gradient(to left, #FF0000 0%, #FF9B29 50%, #FF0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* PLAYABLE CHARACTERS */
+
+.sasuke {
+    position: absolute;
+    z-index: 2;
+    top: 51rem;
+    left: 24rem;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 7.7rem;
+    height: 15rem;
+    visibility: hidden;
+}
+ 
+.sasuke img,
+.naruto img,
+.itachi img,
+.kakashi img{
+    width: 100%;
+    height: 100%;
+}
+
+.deidara img{
+    width: 100%;
+    height: 100%;
+}
+.naruto {
+    position: absolute;
+    z-index: 2;
+    top: 49.6rem;
+    left: 18.5rem;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    width: 16rem;
+    height: 17.5rem;
+    visibility: hidden;
+}
+
+.itachi {
+    position: absolute;
+    z-index: 2;
+    top: 51rem;
+    left: 23.5rem;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    width: 8rem;
+    height: 15.8rem;
+    visibility: hidden;
+}
+
+.kakashi {
+    position: absolute;
+    z-index: 2;
+    top: 52rem;
+    left: 21.5rem;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    width: 14rem;
+    height: 15.8rem;
+    visibility: hidden;
+}
+
+.active-sprite {
+    visibility: visible;
+}
+
+
+/* NPC DEIDARA */
+.deidara {
+    position: absolute;
+    z-index: 2;
+    top: 36.5rem;
+    right: 16rem;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 27rem;
+}
+
+/* END OF PLAYABLE CHARACTERS*/
+
+
+.credits {
+    color: #fff;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.credits a:hover{
+    color: crimson;
+}
+
+
+.credits::after{
+    content: '#100Devs';
+    font-size: 1.6rem;
+    margin-left: 5rem;
+}
+
+.credits i{
+    font-size: 2rem;
+}
